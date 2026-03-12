@@ -51,6 +51,56 @@ import murder3 from "./assets/clubs/drishya/meraz/murder3.png"
 import monoact1 from "./assets/clubs/drishya/inter-iit/monoact.png"
 import mime4 from "./assets/clubs/drishya/ciao/mime4.png"
 
+
+import remalyaImg from "./assets/clubs/beathackers/remalya.png"
+import dheerajImg from "./assets/clubs/beathackers/dheeraj.png"
+import anushkaImg from "./assets/clubs/beathackers/anushka.png"
+import bhumiImg from "./assets/clubs/beathackers/bhumi.png"
+import satwikaImg from "./assets/clubs/beathackers/satwika.png"
+
+import swaraMain from "./assets/clubs/swara/swaramain.png"
+import swaraMain2 from "./assets/clubs/swara/swaramain2.png"
+import fpsMain from "./assets/clubs/fps/fpsmain.png"
+import fpsMain2 from "./assets/clubs/fps/fpsmain2.png"
+import beatMain from "./assets/clubs/beathackers/beatmain.png"
+import beatMain2 from "./assets/clubs/beathackers/beatmain2.png"
+import goalsMain from "./assets/clubs/goals/goalsmain.png"
+import goalsMain2 from "./assets/clubs/goals/goalsmain2.png"
+
+import renMain from "./assets/clubs/renaissance/renmain.png"
+import renMain2 from "./assets/clubs/renaissance/renmain2.png"
+import designxMain from "./assets/clubs/designx/designxmain.png"
+import designxMain2 from "./assets/clubs/designx/designxmain2.png"
+import quizMain from "./assets/clubs/quizzotica/quizmain.png"
+import quizMain2 from "./assets/clubs/quizzotica/quizmain2.png"
+
+
+import sourabhImg from "./assets/clubs/swara/sourabh.png"
+import kinshukImg from "./assets/clubs/swara/kinshuk.png"
+import hamsikaImg from "./assets/clubs/swara/hamsika.png"
+import manjotMusicImg from "./assets/clubs/swara/manjot.png"
+import sarthakImg from "./assets/clubs/swara/sarthak.png"
+import chaitraliImg from "./assets/clubs/swara/chaitrali.png"
+import abhigyanImg from "./assets/clubs/swara/abhigyan.png"
+
+
+
+import vinayakImg from "./assets/clubs/fps/vinayak.png"
+import harinathImg from "./assets/clubs/fps/harinath.png"
+import khushagraFpsImg from "./assets/clubs/fps/khushagra.png"
+
+
+import utkarshImg from "./assets/clubs/goals/utkarsh.png"
+import kanishkaImg from "./assets/clubs/goals/kanishka.png"
+import sakshiImg from "./assets/clubs/goals/sakshi.png"
+import poojaImg from "./assets/clubs/goals/pooja.png"
+import ankanImg from "./assets/clubs/goals/ankan.png"
+import varshithaImg from "./assets/clubs/goals/varshitha.png"
+import madanImg from "./assets/clubs/goals/madan.png"
+import kushagraImg from "./assets/clubs/goals/kushagra.png"
+
+
+
 // Anveshan
 import anveshanSkit from "./assets/clubs/drishya/anveshan/skit.png"
 
@@ -270,6 +320,8 @@ export const CLUBS: Club[] = [
     name: 'DesignX',
     type: 'club',
     tagline: 'Pixels with Purpose',
+    heroImage: designxMain,
+    aboutImage: designxMain2,
     description: 'The digital art and design hub of IIT Bhilai, where creativity meets technology.',
     theme: {
       color: '#0ea5e9',
@@ -561,6 +613,8 @@ export const CLUBS: Club[] = [
     name: 'Quizzotica',
     type: 'club',
     tagline: 'Quest for Knowledge',
+    heroImage: quizMain,
+    aboutImage: quizMain2,
     description: 'The quiz club of IIT Bhilai, challenging minds and celebrating trivia.',
     theme: {
       color: '#f59e0b',
@@ -641,6 +695,8 @@ export const CLUBS: Club[] = [
     name: 'Swara',
     type: 'club',
     tagline: 'The Soul of Music',
+    heroImage: swaraMain,
+    aboutImage: swaraMain2,
     description: 'Where melodies meet the soul, and rhythms define our heartbeat.',
     theme: {
       color: '#800000',
@@ -652,22 +708,108 @@ export const CLUBS: Club[] = [
     },
     about: 'Swara is the music club of IIT Bhilai, dedicated to fostering a vibrant musical culture. From classical ragas to modern rock, we celebrate all forms of musical expression.',
     clubMembers: [
-      { name: 'Arjun Sharma', role: 'Club Coordinator', image: 'https://picsum.photos/seed/swara1/400/400', isCoordinator: true },
-      { name: 'Isha Gupta', role: 'Core Member', image: 'https://picsum.photos/seed/swara2/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/swara3/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/swara4/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/swara5/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/swara6/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/swara7/400/400' }
+
+      {
+        name: "Sourabh Kumar",
+        role: "Club Coordinator",
+        image: sourabhImg,
+        isCoordinator: true
+      },
+
+      {
+        name: "Kinshuk Gupta",
+        role: "Audio & Setup",
+        image: kinshukImg,
+        email: "mailto:kinshukg@iitbhilai.ac.in"
+      },
+
+      {
+        name: "Vanam Hamsika Chandana",
+        role: "General Core",
+        image: hamsikaImg,
+        email: "mailto:vanamhc@iitbhilai.ac.in"
+      },
+
+      {
+        name: "Manjot Singh",
+        role: "Video Editor",
+        image: manjotMusicImg,
+        email: "mailto:manjot@iitbhilai.ac.in"
+      },
+
+      {
+        name: "Sarthak Shrivastava",
+        role: "Core Member",
+        image: sarthakImg,
+        email: "mailto:sarthakshriva@iitbhilai.ac.in"
+      },
+
+      {
+        name: "Chaitrali Zode",
+        role: "Core Member",
+        image: chaitraliImg,
+        email: "mailto:chaitralipz@iitbhilai.ac.in"
+      },
+
+      {
+        name: "Abhigyan Sharma",
+        role: "Core Member",
+        image: abhigyanImg,
+        email: "mailto:abhigyans@iitbhilai.ac.in"
+      }
+
     ],
     upcomingEvents: [
-      { id: 's1', title: 'Unplugged Night', date: 'March 15, 2026', description: 'An evening of acoustic melodies and soulful performances.', image: 'https://picsum.photos/seed/music1/800/600', type: 'upcoming' }
+      {
+        id: "sw-u1",
+        title: "Cultscape",
+        date: "TBA",
+        description: "Music club performances and activities.",
+        image: "https://picsum.photos/seed/cultscape/800/600",
+        type: "upcoming"
+      }
     ],
     interIITEvents: [
       { id: 's-i1', title: 'Inter IIT Music', date: 'Dec 2025', description: 'Our music contingent performing at the national level.', image: 'https://picsum.photos/seed/intermusic/800/600', type: 'inter-iit' }
     ],
     merazEvents: [
-      { id: 's-m1', title: 'Battle of Bands', date: 'Feb 14, 2026', description: 'The ultimate musical showdown during Meraz.', image: 'https://picsum.photos/seed/battlebands/800/600', type: 'meraz' }
+
+      {
+        id: "sw-m1",
+        title: "Battle of Bands",
+        date: "Meraz",
+        description: "Live band competition.",
+        image: "https://picsum.photos/seed/battleofbands/800/600",
+        type: "meraz"
+      },
+
+      {
+        id: "sw-m2",
+        title: "Surreal",
+        date: "Meraz",
+        description: "Offline solo singing competition.",
+        image: "https://picsum.photos/seed/surreal/800/600",
+        type: "meraz"
+      },
+
+      {
+        id: "sw-m3",
+        title: "Euphony",
+        date: "Meraz",
+        description: "Online solo singing competition.",
+        image: "https://picsum.photos/seed/euphony/800/600",
+        type: "meraz"
+      },
+
+      {
+        id: "sw-m4",
+        title: "Symphoria",
+        date: "Meraz",
+        description: "Online instrumental competition.",
+        image: "https://picsum.photos/seed/symphoria/800/600",
+        type: "meraz"
+      }
+
     ],
     anveshanEvents: [
       { id: 's-a1', title: 'House Music Shield', date: 'March 12, 2026', description: 'Inter-house music competition.', image: 'https://picsum.photos/seed/housemusic/800/600', type: 'anveshan' }
@@ -686,6 +828,8 @@ export const CLUBS: Club[] = [
     name: 'Beathackers',
     type: 'club',
     tagline: 'Dance to the Rhythm',
+    heroImage: beatMain,
+    aboutImage: beatMain2,
     description: 'The dance club that brings energy, passion, and precision to the floor.',
     theme: {
       color: '#dc2626',
@@ -697,13 +841,49 @@ export const CLUBS: Club[] = [
     },
     about: 'Beathackers is the dance club of IIT Bhilai. We cover a wide range of styles including hip-hop, contemporary, and Bollywood, focusing on high-energy performances.',
     clubMembers: [
-      { name: 'Sahil Khan', role: 'Club Coordinator', image: 'https://picsum.photos/seed/dance1/400/400', isCoordinator: true },
-      { name: 'Priya Sharma', role: 'Core Member', image: 'https://picsum.photos/seed/dance2/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/dance3/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/dance4/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/dance5/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/dance6/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/dance7/400/400' }
+
+      {
+        name: "Sahil Khan",
+        role: "Club Coordinator",
+        image: "https://picsum.photos/seed/dance1/400/400",
+        isCoordinator: true
+      },
+
+      {
+        name: "Remalya G",
+        role: "Choreography Team",
+        image: remalyaImg,
+        instagram: "https://instagram.com/i_remalya"
+      },
+
+      {
+        name: "N. Dheeraj",
+        role: "Management Team",
+        image: dheerajImg,
+        instagram: "https://instagram.com/dheeru__2008"
+      },
+
+      {
+        name: "Anushka Gawande",
+        role: "Management Team",
+        image: anushkaImg,
+        instagram: "https://instagram.com/anushka_gawande_1"
+      },
+
+      {
+        name: "Bhumi Tapdiya",
+        role: "Choreography Team",
+        image: bhumiImg,
+        instagram: "https://instagram.com/bhumitapdiya"
+      },
+
+      {
+        name: "Lanka Devi Satwika",
+        role: "Management Team",
+        image: satwikaImg,
+        instagram: "https://instagram.com/satwika_369"
+      }
+
     ],
     upcomingEvents: [
       { id: 'b1', title: 'Dance Off', date: 'April 20, 2026', description: 'A high-stakes dance battle between different houses.', image: 'https://picsum.photos/seed/dance_event1/800/600', type: 'upcoming' }
@@ -731,6 +911,8 @@ export const CLUBS: Club[] = [
     name: 'Renaissance',
     type: 'club',
     tagline: 'Art in Every Breath',
+    heroImage: renMain,
+    aboutImage: renMain2,
     description: 'A sanctuary for fine arts, where every stroke tells a story.',
     theme: {
       color: '#1e3a8a',
@@ -777,6 +959,8 @@ export const CLUBS: Club[] = [
     name: 'FPS',
     type: 'society',
     tagline: 'Cinema in Motion',
+    heroImage: fpsMain,
+    aboutImage: fpsMain2,
     description: 'The Film Production Society, bringing cinematic visions to life.',
     theme: {
       color: '#000000',
@@ -788,13 +972,33 @@ export const CLUBS: Club[] = [
     },
     about: 'FPS focuses on filmmaking, cinematography, and post-production, providing students with the tools and knowledge to create compelling visual stories.',
     clubMembers: [
-      { name: 'Varun Dhawan', role: 'Club Coordinator', image: 'https://picsum.photos/seed/fps1/400/400', isCoordinator: true },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/fps2/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/fps3/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/fps4/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/fps5/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/fps6/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/fps7/400/400' }
+
+      {
+        name: "Manjot Singh",
+        role: "Secretary",
+        image: manjotMusicImg,
+        instagram: "https://instagram.com/manjot.mp4",
+        isCoordinator: true
+      },
+
+      {
+        name: "Vinayak Singh",
+        role: "Pre-Production Head",
+        image: vinayakImg
+      },
+
+      {
+        name: "Harinath KR",
+        role: "Production Head",
+        image: harinathImg
+      },
+
+      {
+        name: "Khushagra Barfa",
+        role: "Media Head",
+        image: khushagraFpsImg
+      }
+
     ],
     upcomingEvents: [
       { id: 'fps-u1', title: 'Short Film Screening', date: 'April 25, 2026', description: 'A showcase of short films created by our members.', image: 'https://picsum.photos/seed/screening/800/600', type: 'upcoming' }
@@ -823,6 +1027,8 @@ export const CLUBS: Club[] = [
     name: 'GOALS',
     type: 'society',
     tagline: 'The Power of Words',
+    heroImage: goalsMain,
+    aboutImage: goalsMain2,
     description: 'General Oratory & Literary Arts Society, where voices find their strength.',
     theme: {
       color: '#431407',
@@ -834,13 +1040,69 @@ export const CLUBS: Club[] = [
     },
     about: 'GOALS is the literary and oratory society of IIT Bhilai, fostering skills in public speaking, creative writing, and debating.',
     clubMembers: [
-      { name: 'Meera Nair', role: 'Club Coordinator', image: 'https://picsum.photos/seed/goals1/400/400', isCoordinator: true },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/goals2/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/goals3/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/goals4/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/goals5/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/goals6/400/400' },
-      { name: 'TBA', role: 'Core Member', image: 'https://picsum.photos/seed/goals7/400/400' }
+
+      {
+        name: "Utkarsh Chatterjee",
+        role: "Secretary",
+        image: utkarshImg,
+        email: "mailto:utkarshchatt@iitbhilai.ac.in",
+        instagram: "https://instagram.com/utkchatterjee",
+        isCoordinator: true
+      },
+
+      {
+        name: "Kanishka Yadav",
+        role: "Secretary",
+        image: kanishkaImg,
+        email: "mailto:kanishka@iitbhilai.ac.in",
+        instagram: "https://instagram.com/kanishka_y1210"
+      },
+
+      {
+        name: "Sakshi Srivastava",
+        role: "Outreach Core",
+        image: sakshiImg,
+        email: "mailto:sakshis@iitbhilai.ac.in"
+      },
+
+      {
+        name: "Pooja Dange",
+        role: "LitSoc Head (English)",
+        image: poojaImg,
+        email: "mailto:dangeps@iitbhilai.ac.in",
+        instagram: "https://instagram.com/poojadange1364"
+      },
+
+      {
+        name: "Ankan Mondal",
+        role: "Designing Head",
+        image: ankanImg,
+        email: "mailto:ankanm@iitbhilai.ac.in",
+        instagram: "https://instagram.com/mondalankan3004"
+      },
+
+      {
+        name: "V Varshitha",
+        role: "DebSoc Head",
+        image: varshithaImg,
+        email: "mailto:vadlamuruvk@iitbhilai.ac.in",
+        instagram: "https://instagram.com/varshitha_411"
+      },
+
+      {
+        name: "Madan Vishvakarma",
+        role: "LitSoc Head (Hindi)",
+        image: madanImg,
+        email: "mailto:madanv@iitbhilai.ac.in"
+      },
+
+      {
+        name: "Kushagra Katare",
+        role: "Website Manager",
+        image: kushagraImg,
+        email: "mailto:kushagrak@iitbhilai.ac.in"
+      }
+
     ],
     upcomingEvents: [
       { id: 'goals-u1', title: 'Poetry Slam', date: 'April 30, 2026', description: 'An evening of powerful poetry and spoken word.', image: 'https://picsum.photos/seed/poetry/800/600', type: 'upcoming' }

@@ -342,10 +342,10 @@ export const Home = () => {
               to={`/club/${club.id}`}
               className="relative h-[420px] overflow-hidden rounded-3xl border border-white/10 group"
             >
-
               <img
-                src={club.gallery[0]}
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                src={club.heroImage || club.gallery[0]}
+                alt={club.name}
+                className="w-full h-full object-cover"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent" />
