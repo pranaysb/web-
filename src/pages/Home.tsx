@@ -331,47 +331,108 @@ export const Home = () => {
 
       {/* CLUBS */}
 
+      {/* CLUBS */}
+
       <Section className="py-32">
 
-        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto px-8 mb-16">
 
-          {CLUBS.slice(0, 4).map(club => (
+          <h2 className="text-4xl md:text-6xl font-serif">
+            Cultural <span className="italic text-indigo-400">Clubs</span>
+          </h2>
 
-            <Link
-              key={club.id}
-              to={`/club/${club.id}`}
-              className="relative h-[420px] overflow-hidden rounded-3xl border border-white/10 group"
-            >
-              <img
-                src={club.heroImage || club.gallery[0]}
-                alt={club.name}
-                className="w-full h-full object-cover"
-              />
+        </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent" />
+        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-              <div className="absolute bottom-10 left-10">
+          {CLUBS
+            .filter(c => c.type === "club")
+            .map(club => (
 
-                <h3 className="text-4xl font-serif text-white">
-                  {club.name}
-                </h3>
+              <Link
+                key={club.id}
+                to={`/club/${club.id}`}
+                className="relative h-[420px] overflow-hidden rounded-3xl border border-white/10 group"
+              >
 
-                <p className="text-white/40 text-sm">
-                  {club.tagline}
-                </p>
+                <img
+                  src={club.coverimage || club.heroImage || club.gallery?.[0]}
+                  alt={club.name}
+                  className="w-full h-full object-cover"
+                />
 
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent" />
 
-            </Link>
+                <div className="absolute bottom-10 left-10">
 
-          ))}
+                  <h3 className="text-4xl font-serif text-white">
+                    {club.name}
+                  </h3>
+
+                  <p className="text-white/40 text-sm">
+                    {club.tagline}
+                  </p>
+
+                </div>
+
+              </Link>
+
+            ))}
 
         </div>
 
       </Section>
+      {/* SOCIETIES */}
 
+      <Section className="py-32">
 
+        <div className="max-w-7xl mx-auto px-8 mb-16">
 
+          <h2 className="text-4xl md:text-6xl font-serif">
+            Cultural <span className="italic text-indigo-400">Societies</span>
+          </h2>
+
+        </div>
+
+        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {CLUBS
+            .filter(c => c.type === "society")
+            .map(club => (
+
+              <Link
+                key={club.id}
+                to={`/society/${club.id}`}
+                className="relative h-[420px] overflow-hidden rounded-3xl border border-white/10 group"
+              >
+
+                <img
+                  src={club.coverimage || club.heroImage || club.gallery?.[0]}
+                  alt={club.name}
+                  className="w-full h-full object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent" />
+
+                <div className="absolute bottom-10 left-10">
+
+                  <h3 className="text-4xl font-serif text-white">
+                    {club.name}
+                  </h3>
+
+                  <p className="text-white/40 text-sm">
+                    {club.tagline}
+                  </p>
+
+                </div>
+
+              </Link>
+
+            ))}
+
+        </div>
+
+      </Section>
       {/* COUNCIL */}
 
       <Section className="py-40 max-w-7xl mx-auto px-8">

@@ -11,7 +11,7 @@ export const Societies = () => {
     <Layout>
       <Section className="pt-40 pb-32 px-8 max-w-7xl mx-auto">
         <div className="flex flex-col gap-8 mb-32">
-          <motion.span 
+          <motion.span
             className="text-indigo-400 text-xs uppercase tracking-[0.8em] opacity-60"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 0.6, y: 0 }}
@@ -20,7 +20,7 @@ export const Societies = () => {
             The Societies
           </motion.span>
           <div className="overflow-hidden">
-            <motion.h1 
+            <motion.h1
               className="text-6xl md:text-9xl font-serif leading-tight"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -29,7 +29,7 @@ export const Societies = () => {
               Literary & <span className="italic text-shimmer">Visual</span>
             </motion.h1>
           </div>
-          <motion.p 
+          <motion.p
             className="text-white/30 text-lg max-w-2xl leading-relaxed tracking-wide"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,27 +54,27 @@ export const Societies = () => {
               whileHover={{ scale: 1.02, y: -10 }}
             >
               {/* Ambient Aura Glow */}
-              <div 
+              <div
                 className="absolute inset-[-30px] opacity-0 group-hover:opacity-20 transition-opacity duration-1000 blur-[60px] rounded-full pointer-events-none z-0"
                 style={{ background: society.theme.glowColor }}
               />
 
               <Link to={`/society/${society.id}`} className="block relative overflow-hidden rounded-3xl aspect-[4/5] border border-white/5 bg-white/[0.02] backdrop-blur-xl z-10">
                 <img
-                  src={society.gallery[1] || society.gallery[0] || `https://picsum.photos/seed/${society.id}/800/1200`}
+                  src={society.coverimage || society.heroImage || society.gallery?.[0]}
                   alt={society.name}
                   className="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-110 opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0"
                   referrerPolicy="no-referrer"
                 />
-                
+
                 {/* Dynamic Lighting based on society theme */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-1500"
                   style={{ background: society.theme.lighting }}
                 />
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f2a] via-[#0b0f2a]/20 to-transparent" />
-                
+
                 <div className="absolute inset-0 flex flex-col justify-end p-8">
                   <div className="flex flex-col">
                     <span className="text-indigo-400 text-[10px] uppercase tracking-[0.6em] mb-2 block opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-4 group-hover:translate-y-0">
@@ -86,7 +86,7 @@ export const Societies = () => {
                     <div className="w-8 h-[1px] bg-indigo-500 mb-4 group-hover:w-full transition-all duration-1500 origin-left opacity-30 group-hover:opacity-100" />
                   </div>
                 </div>
-                
+
                 {/* Colored Border Draw Animation */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
                   <motion.rect

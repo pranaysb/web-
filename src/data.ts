@@ -8,6 +8,28 @@ import beatCoord from "./assets/council/beathackers.png"
 import renCoord from "./assets/council/renaissance.png"
 import goalssec1 from "./assets/council/GOALS1.png"
 import goalssec2 from "./assets/council/GOALS2.png"
+
+
+
+import designxLogo from "./assets/logos/designx.png"
+import quizLogo from "./assets/logos/quizzotica.png"
+import swaraLogo from "./assets/logos/swara.png"
+import beatLogo from "./assets/logos/beathackers.png"
+import renLogo from "./assets/logos/renaissance.png"
+import fpsLogo from "./assets/logos/fps.png"
+import goalsLogo from "./assets/logos/goals.png"
+import tpsLogo from "./assets/logos/tps.png"
+
+
+import drishyaCover from "./assets/clubs/drishya/cover.png"
+import designxCover from "./assets/clubs/designx/cover.png"
+import quizCover from "./assets/clubs/quizzotica/cover.png"
+import swaraCover from "./assets/clubs/swara/cover.png"
+import beatCover from "./assets/clubs/beathackers/cover.png"
+import renCover from "./assets/clubs/renaissance/cover.png"
+import goalsCover from "./assets/clubs/goals/cover.png"
+import fpsCover from "./assets/clubs/fps/cover.png"
+import tpsCover from "./assets/clubs/tps/cover.png"
 import fpssec from "./assets/council/FPS.png"
 
 
@@ -147,6 +169,7 @@ export interface Club {
   tagline: string;
   logo: string;
   description: string;
+  coverimage?: string;
   heroImage?: string;
   aboutImage?: string;
 
@@ -319,6 +342,8 @@ export const CLUBS: Club[] = [
     id: 'designx',
     name: 'DesignX',
     type: 'club',
+    logo: designxLogo,
+    coverimage: designxCover,
     tagline: 'Pixels with Purpose',
     heroImage: designxMain,
     aboutImage: designxMain2,
@@ -366,6 +391,7 @@ export const CLUBS: Club[] = [
     tagline: 'The Stage is Yours',
     logo: drishyaLogo,
     heroImage: drishyaMain,
+    coverimage: drishyaCover,
     aboutImage: drishyaMain2,
     description: 'Bringing stories to life through the magic of theatre and drama.',
     theme: {
@@ -612,6 +638,8 @@ export const CLUBS: Club[] = [
     id: 'quizzotica',
     name: 'Quizzotica',
     type: 'club',
+    logo: quizLogo,
+    coverimage: quizCover,
     tagline: 'Quest for Knowledge',
     heroImage: quizMain,
     aboutImage: quizMain2,
@@ -653,7 +681,9 @@ export const CLUBS: Club[] = [
     id: 'tps',
     name: 'TPS',
     type: 'club',
+    coverimage: tpsCover,
     tagline: 'Capture the Moment',
+    logo: tpsLogo,
     description: 'The Photography Society, freezing time one frame at a time.',
     theme: {
       color: '#64748b',
@@ -694,9 +724,11 @@ export const CLUBS: Club[] = [
     id: 'swara',
     name: 'Swara',
     type: 'club',
+    coverimage: swaraCover,
     tagline: 'The Soul of Music',
     heroImage: swaraMain,
     aboutImage: swaraMain2,
+    logo: swaraLogo,
     description: 'Where melodies meet the soul, and rhythms define our heartbeat.',
     theme: {
       color: '#800000',
@@ -827,7 +859,9 @@ export const CLUBS: Club[] = [
     id: 'beathackers',
     name: 'Beathackers',
     type: 'club',
+    coverimage: beatCover,
     tagline: 'Dance to the Rhythm',
+    logo: beatLogo,
     heroImage: beatMain,
     aboutImage: beatMain2,
     description: 'The dance club that brings energy, passion, and precision to the floor.',
@@ -910,7 +944,9 @@ export const CLUBS: Club[] = [
     id: 'renaissance',
     name: 'Renaissance',
     type: 'club',
+    coverimage: renCover,
     tagline: 'Art in Every Breath',
+    logo: renLogo,
     heroImage: renMain,
     aboutImage: renMain2,
     description: 'A sanctuary for fine arts, where every stroke tells a story.',
@@ -958,7 +994,9 @@ export const CLUBS: Club[] = [
     id: 'fps',
     name: 'FPS',
     type: 'society',
+    coverimage: fpsCover,
     tagline: 'Cinema in Motion',
+    logo: fpsLogo,
     heroImage: fpsMain,
     aboutImage: fpsMain2,
     description: 'The Film Production Society, bringing cinematic visions to life.',
@@ -1026,7 +1064,9 @@ export const CLUBS: Club[] = [
     id: 'goals',
     name: 'GOALS',
     type: 'society',
+    coverimage: goalsCover,
     tagline: 'The Power of Words',
+    logo: goalsLogo,
     heroImage: goalsMain,
     aboutImage: goalsMain2,
     description: 'General Oratory & Literary Arts Society, where voices find their strength.',
