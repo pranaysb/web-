@@ -1095,7 +1095,8 @@ export const CLUBS: Club[] = [
         role: "Secretary",
         image: kanishkaImg,
         email: "mailto:kanishka@iitbhilai.ac.in",
-        instagram: "https://instagram.com/kanishka_y1210"
+        instagram: "https://instagram.com/kanishka_y1210",
+        isCoordinator: true
       },
 
       {

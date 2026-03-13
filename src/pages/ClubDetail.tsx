@@ -228,7 +228,7 @@ export const ClubDetail = () => {
 
   if (!club) return <Navigate to={backLink} />;
 
-  const coordinator = club.clubMembers.find(m => m.isCoordinator);
+  const coordinators = club.clubMembers.filter(m => m.isCoordinator);
   const coreMembers = club.clubMembers.filter(m => !m.isCoordinator);
 
   return (
@@ -404,9 +404,16 @@ export const ClubDetail = () => {
           </div>
 
           <div className="flex flex-col gap-12">
-            {coordinator && (
-              <div className="flex justify-center mb-12">
-                <TeamCard member={coordinator} glowColor={club.theme.glowColor} isCoordinator={true} />
+            {coordinators.length > 0 && (
+              <div className="grid md:grid-cols-2 gap-10 justify-center mb-16 max-w-3xl mx-auto">
+                {coordinators.map((member, i) => (
+                  <TeamCard
+                    key={`coordinator-${i}`}
+                    member={member}
+                    glowColor={club.theme.glowColor}
+                    isCoordinator={true}
+                  />
+                ))}
               </div>
             )}
 
