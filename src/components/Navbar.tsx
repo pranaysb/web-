@@ -52,7 +52,7 @@ export const Navbar = () => {
         </div>
       </Link>
 
-      <div className="flex gap-12 absolute left-1/2 -translate-x-1/2">
+      <div className="flex gap-10 mr-24 whitespace-nowrap">
         {NAV_ITEMS.map((item) => (
           <Link
             key={item.path}
