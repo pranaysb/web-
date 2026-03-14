@@ -7,6 +7,7 @@ import { Calendar, Users, Image as ImageIcon, ArrowLeft, Play, Music, Palette, T
 import { useRef, useEffect, useState } from 'react';
 import React from 'react';
 import { Event } from '../data';
+import { ImageLightbox } from "../components/ImageLightbox";
 import { EventModal } from '../components/EventModal';
 import { ClubAnimation } from '../components/clubAnimations';
 
@@ -757,40 +758,14 @@ export const ClubDetail = () => {
       </div>
 
       {/* Gallery Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="absolute inset-0 bg-black/95 backdrop-blur-2xl"
-              onClick={() => setSelectedImage(null)}
-            />
-            <motion.div
-              className="relative w-full max-w-7xl h-full flex items-center justify-center"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-            >
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-0 right-0 p-8 text-white/50 hover:text-white transition-colors z-10 hover:scale-110"
-              >
-                <X className="w-8 h-8" />
-              </button>
-              <img
-                src={selectedImage}
-                alt="Full view"
-                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Image Lightbox */}
+
+      {selectedImage && (
+        <ImageLightbox
+          image={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
 
       {/* Video Modal */}
       <AnimatePresence>

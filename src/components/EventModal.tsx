@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { X, Calendar, MapPin, Info, Star } from "lucide-react";
+import { X, Calendar, MapPin, Info, Star, Trophy } from "lucide-react";
 import { Event } from "../data";
 
 interface EventModalProps {
@@ -11,16 +11,12 @@ interface EventModalProps {
 
 export const EventModal = ({ event, onClose }: EventModalProps) => {
 
-  /* ---------------- IMAGE SLIDER STATE ---------------- */
-
   const [currentImage, setCurrentImage] = useState(0);
 
   const images =
     event.images && event.images.length > 0
       ? event.images
       : [event.image];
-
-  /* ---------------- ESC + SCROLL LOCK ---------------- */
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -46,23 +42,23 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
       exit={{ opacity: 0 }}
     >
 
-      {/* Backdrop */}
+      {/* BACKDROP */}
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-md"
         onClick={onClose}
       />
 
-      {/* Modal */}
+      {/* MODAL */}
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-[92%] max-w-[650px] max-h-[90vh] flex flex-col bg-[#0b0f2a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-[92%] max-w-[700px] max-h-[80vh] flex flex-col bg-[#0b0f2a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 180, damping: 25 }}
       >
 
-        {/* Close Button */}
+        {/* CLOSE BUTTON */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/40 border border-white/10 hover:bg-black/60 transition"
@@ -70,9 +66,8 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
           <X className="w-5 h-5 text-white/70" />
         </button>
 
-        {/* ---------------- IMAGE SLIDER ---------------- */}
-
-        <div className="h-[220px] w-full shrink-0 relative overflow-hidden">
+        {/* HERO IMAGE */}
+        <div className="h-[300px] md:h-[340px] w-full shrink-0 relative overflow-hidden">
 
           <img
             src={images[currentImage]}
@@ -84,26 +79,24 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
 
           {images.length > 1 && (
             <>
-              {/* Left Button */}
               <button
                 onClick={() =>
                   setCurrentImage(
                     (currentImage - 1 + images.length) % images.length
                   )
                 }
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-lg hover:bg-black/70 transition"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-lg hover:bg-black/70 transition"
               >
                 ‹
               </button>
 
-              {/* Right Button */}
               <button
                 onClick={() =>
                   setCurrentImage(
                     (currentImage + 1) % images.length
                   )
                 }
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-lg hover:bg-black/70 transition"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-lg hover:bg-black/70 transition"
               >
                 ›
               </button>
@@ -112,72 +105,110 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
 
         </div>
 
-        {/* ---------------- CONTENT ---------------- */}
 
-        <div className="p-8 flex-1 overflow-y-auto flex flex-col gap-6">
+        {/* CONTENT */}
+        <div className="p-6 flex flex-col gap-5 overflow-y-auto">
 
-          <div className="flex gap-3 flex-wrap">
+          {/* TAG */}
+          <div className="flex gap-2 flex-wrap">
             <span className="px-3 py-1 bg-indigo-600 text-white text-[9px] uppercase tracking-[0.2em] rounded-full">
               {event.type}
             </span>
-
-            {event.category && (
-              <span className="px-3 py-1 bg-white/10 border border-white/10 text-white/80 text-[9px] uppercase tracking-[0.2em] rounded-full">
-                {event.category}
-              </span>
-            )}
           </div>
 
+          {/* TITLE */}
           <h2 className="text-3xl font-serif text-white">
             {event.title}
           </h2>
 
+          {/* META */}
           <div className="flex items-center gap-6 text-white/40 text-xs uppercase tracking-[0.2em]">
+
             <span className="flex items-center gap-2">
               <Calendar className="w-3 h-3" /> {event.date}
             </span>
 
             <span className="flex items-center gap-2">
-              <MapPin className="w-3 h-3" /> IIT Bhilai
-            </span>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <span className="text-white/40 text-[10px] uppercase tracking-[0.4em] flex items-center gap-2">
-              <Info className="w-3 h-3 text-indigo-400" /> Description
+              <MapPin className="w-3 h-3" /> {event.type === "inter-iit" ? "IIT Kanpur" : "IIT Bhilai"}
             </span>
 
-            <p className="text-white/70 text-sm leading-relaxed">
-              {event.fullDescription || event.description}
-            </p>
           </div>
 
-          {event.highlights && (
+
+          {/* DESCRIPTION + HIGHLIGHTS */}
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {/* DESCRIPTION */}
             <div className="flex flex-col gap-3">
 
-              <span className="text-white/40 text-[10px] uppercase tracking-[0.4em] flex items-center gap-2">
-                <Star className="w-3 h-3 text-indigo-400" /> Highlights
+              <span className="text-white/40 text-[10px] uppercase tracking-[0.35em] flex items-center gap-2">
+                <Info className="w-3 h-3 text-indigo-400" />
+                Description
               </span>
 
-              {event.highlights.map((highlight, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 bg-white/[0.03] border border-white/5 rounded-lg p-3"
-                >
-                  <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full" />
-
-                  <span className="text-white/70 text-sm">
-                    {highlight}
-                  </span>
-                </div>
-              ))}
+              <p className="text-white/70 text-sm leading-relaxed">
+                {event.fullDescription || event.description}
+              </p>
 
             </div>
-          )}
 
-          <button className="mt-4 w-full py-3 bg-white text-black text-[10px] uppercase tracking-[0.35em] rounded-full hover:bg-indigo-400 transition">
-            Register Now
-          </button>
+
+            {/* HIGHLIGHTS */}
+            {event.highlights && (
+              <div className="flex flex-col gap-3">
+
+                <span className="text-white/40 text-[10px] uppercase tracking-[0.35em] flex items-center gap-2">
+                  <Star className="w-3 h-3 text-indigo-400" />
+                  Highlights
+                </span>
+
+                <div className="flex flex-col gap-3">
+
+                  {event.highlights.map((highlight, i) => {
+
+                    const isRank = highlight.toLowerCase().includes("rank");
+
+                    return (
+                      <motion.div
+                        key={i}
+                        whileHover={{ scale: 1.02 }}
+                        className={`flex items-center gap-3 rounded-xl px-4 py-2.5 border transition
+                        
+                        ${isRank
+                            ? "bg-indigo-500/10 border-indigo-500/30"
+                            : "bg-white/[0.03] border-white/5"
+                          }`}
+                      >
+
+                        {isRank ? (
+                          <Trophy className="w-4 h-4 text-yellow-400" />
+                        ) : (
+                          <div className="w-2 h-2 bg-indigo-500 rounded-full" />
+                        )}
+
+                        <span className="text-white/80 text-sm">
+                          {highlight}
+                        </span>
+
+                      </motion.div>
+                    );
+
+                  })}
+
+                </div>
+
+              </div>
+            )}
+
+          </div>
+
+
+          {/* REGISTER BUTTON */}
+          {event.type === "upcoming" && (
+            <button className="mt-4 w-full py-3 bg-white text-black text-[10px] uppercase tracking-[0.35em] rounded-full hover:bg-indigo-400 transition">
+              Register Now
+            </button>
+          )}
 
         </div>
 

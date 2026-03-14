@@ -34,9 +34,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       {/* Global Cinematic Background System */}
       <div className="gradient-mesh" />
       <div className="noise-overlay" />
-      
+
       {/* Ambient Cursor Light */}
-      <motion.div 
+      <motion.div
         className="fixed inset-0 pointer-events-none z-10 opacity-30"
         style={{
           background: useTransform(
@@ -51,7 +51,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-500/10 blur-[120px] rounded-full animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-crimson-500/10 blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
-      
+
       {/* Scroll Progress Mandala Indicator */}
       <div className="fixed bottom-8 right-8 w-24 h-24 z-50 flex items-center justify-center pointer-events-none">
         <svg className="w-full h-full -rotate-90 overflow-visible">
@@ -74,7 +74,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
             className="drop-shadow-[0_0_12px_rgba(99,102,241,0.6)]"
           />
         </svg>
-        <motion.div 
+        <motion.div
           className="absolute inset-0 p-4 opacity-30"
           style={{ rotate }}
         >
@@ -89,11 +89,11 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       </div>
 
       <Navbar />
-      
+
       <main className="relative z-10">
         {children}
       </main>
-      
+
       <footer className="py-32 px-8 border-t border-white/5 bg-[#0b0f2a]/80 backdrop-blur-2xl relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
           <div className="flex flex-col gap-6 col-span-1 md:col-span-2">
@@ -108,6 +108,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
               <Link to="/" className="hover:text-white transition-colors duration-500">Home</Link>
               <Link to="/clubs" className="hover:text-white transition-colors duration-500">The Guilds</Link>
               <Link to="/archive" className="hover:text-white transition-colors duration-500">Events Archive</Link>
+              <Link to="/feedback" className="hover:text-white transition-colors duration-500">
+                Feedback Form
+              </Link>
               <a href="#" className="hover:text-white transition-colors duration-500">Contact Us</a>
             </div>
           </div>
@@ -133,7 +136,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const Section = ({ children, className, id }: { children: ReactNode, className?: string, id?: string }) => {
+export const Section = ({ children, className, id }: { children?: ReactNode, className?: string, id?: string }) => {
   return (
     <motion.section
       id={id}

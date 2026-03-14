@@ -7,6 +7,7 @@ import { ClubDetail } from './pages/ClubDetail';
 import { Archive } from './pages/Archive';
 import { HallOfFame } from './pages/HallOfFame';
 import { Gallery } from './pages/Gallery';
+import { Feedback } from "./pages/Feedback";
 import { AnimatePresence, motion } from 'motion/react';
 
 import { PageTransition } from './components/PageTransition';
@@ -34,6 +35,7 @@ const AppRoutes = () => {
           <Route path="/society/:id" element={<PageTransition><ClubDetail /></PageTransition>} />
           <Route path="/archive" element={<PageTransition><Archive /></PageTransition>} />
           <Route path="/hall-of-fame" element={<PageTransition><HallOfFame /></PageTransition>} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
         </Routes>
       </motion.div>

@@ -4,8 +4,11 @@ import {
   useTransform,
   AnimatePresence
 } from "motion/react";
-
+import { CulturalPulse } from "../components/CulturalPulse";
+import { CulturalCalendar } from "../components/CulturalCalendar";
+import { HallOfFame } from "../components/HallOfFame";
 import { Link } from "react-router-dom";
+import { CulturalFeed } from "../components/CulturalFeed";
 import { Layout, Section } from "../components/Layout";
 import { Mandala } from "../components/Mandala";
 import {
@@ -129,6 +132,7 @@ const StatBoard = () => {
     </div>
   );
 };
+
 
 
 
@@ -326,7 +330,9 @@ export const Home = () => {
         </div>
 
       </Section>
-
+      <CulturalCalendar />
+      <CulturalFeed />
+      <CulturalPulse />
 
 
       {/* CLUBS */}
@@ -455,7 +461,7 @@ export const Home = () => {
 
       </Section>
 
-
+      <HallOfFame />
 
       {/* GALLERY */}
 

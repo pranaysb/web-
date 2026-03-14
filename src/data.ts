@@ -10,7 +10,6 @@ import goalssec1 from "./assets/council/GOALS1.png"
 import goalssec2 from "./assets/council/GOALS2.png"
 
 
-
 import designxLogo from "./assets/logos/designx.png"
 import quizLogo from "./assets/logos/quizzotica.png"
 import swaraLogo from "./assets/logos/swara.png"
@@ -31,7 +30,12 @@ import goalsCover from "./assets/clubs/goals/cover.png"
 import fpsCover from "./assets/clubs/fps/cover.png"
 import tpsCover from "./assets/clubs/tps/cover.png"
 import fpssec from "./assets/council/FPS.png"
+import aditiContributor from "./assets/contributors/aditi.png";
+import rohitContributor from "./assets/contributors/rohit.png";
+import snehaContributor from "./assets/contributors/sneha.png";
 
+import songCover from "./assets/spotlight/songcover.png";
+import artworkSpotlight from "./assets/spotlight/artwork.png";
 
 import auditionImg from "./assets/clubs/drishya/audition.png"
 
@@ -88,6 +92,8 @@ import beatMain from "./assets/clubs/beathackers/beatmain.png"
 import beatMain2 from "./assets/clubs/beathackers/beatmain2.png"
 import goalsMain from "./assets/clubs/goals/goalsmain.png"
 import goalsMain2 from "./assets/clubs/goals/goalsmain2.png"
+import tpsMain from "./assets/clubs/tps/tpsmain.png"
+import tpsMain2 from "./assets/clubs/tps/tpsmain2.png"
 
 import renMain from "./assets/clubs/renaissance/renmain.png"
 import renMain2 from "./assets/clubs/renaissance/renmain2.png"
@@ -122,7 +128,81 @@ import madanImg from "./assets/clubs/goals/madan.png"
 import kushagraImg from "./assets/clubs/goals/kushagra.png"
 
 
+/* ========================= */
+/* CULTURAL FEED */
+/* ========================= */
 
+export const CULTURAL_FEED = [
+  {
+    id: "feed1",
+    club: "Swara",
+    activity: "Hosted an open jamming session",
+    date: "Today",
+    image: swaraMain
+  },
+  {
+    id: "feed2",
+    club: "Drishya",
+    activity: "Street play rehearsal for Inter IIT",
+    date: "2 days ago",
+    image: drishyaMain
+  },
+  {
+    id: "feed3",
+    club: "Renaissance",
+    activity: "Completed a campus street art mural",
+    date: "Last week",
+    image: renMain
+  },
+  {
+    id: "feed4",
+    club: "TPS",
+    activity: "Photography walk across campus",
+    date: "Last week",
+    image: tpsMain
+  }
+];
+
+export const TOP_CONTRIBUTORS = [
+  {
+    category: "Performer of the Week",
+    name: "Aditi Sharma",
+    club: "Swara",
+    image: aditiContributor
+  },
+  {
+    category: "Artist of the Week",
+    name: "Rohit Jain",
+    club: "Renaissance",
+    image: rohitContributor
+  },
+  {
+    category: "Photographer of the Week",
+    name: "Sneha Patel",
+    club: "TPS",
+    image: snehaContributor
+  }
+];
+
+export const CREATIVE_SPOTLIGHT = [
+  {
+    title: "Song Cover of the Week",
+    creator: "Arjun Mehta",
+    club: "Swara",
+    media: songCover
+  },
+  {
+    title: "Artwork of the Week",
+    creator: "Pooja Sharma",
+    club: "Renaissance",
+    media: artworkSpotlight
+  }
+];
+export const WEEKLY_CHALLENGE = {
+  title: "Act a 30 second monologue",
+  description: "Upload your best dramatic monologue performance.",
+  deadline: "Sunday 11:59 PM"
+};
 // Anveshan
 import anveshanSkit from "./assets/clubs/drishya/anveshan/skit.png"
 
@@ -140,6 +220,8 @@ export interface Event {
   year?: number;
   fullDescription?: string;
   highlights?: string[];
+  clubId?: string;
+  clubName?: string;
 }
 
 export interface InterIITStat {
@@ -682,6 +764,8 @@ export const CLUBS: Club[] = [
     name: 'TPS',
     type: 'club',
     coverimage: tpsCover,
+    heroImage: tpsMain,
+    aboutImage: tpsMain2,
     tagline: 'Capture the Moment',
     logo: tpsLogo,
     description: 'The Photography Society, freezing time one frame at a time.',

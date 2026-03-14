@@ -10,7 +10,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-[#0b0f2a] text-white antialiased selection:bg-[#D4AF37] selection:text-black;
     background: radial-gradient(circle at center, #1a0f2e 0%, #0b0f2a 100%);
@@ -41,9 +41,17 @@
   }
 
   @keyframes mesh-drift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .text-shimmer {
@@ -55,13 +63,23 @@
   }
 
   @keyframes shimmer {
-    to { background-position: 200% center; }
+    to {
+      background-position: 200% center;
+    }
   }
 
   @keyframes flash {
-    0% { opacity: 0; }
-    50% { opacity: 0.8; }
-    100% { opacity: 0; }
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 0;
+    }
   }
 
   .animate-flash {
@@ -80,6 +98,107 @@
   }
 
   @keyframes ink-reveal {
-    to { mask-position: 0 0; }
+    to {
+      mask-position: 0 0;
+    }
+  }
+
+
+
+  /* ========================= */
+  /* CULTURAL CALENDAR STYLE */
+  /* ========================= */
+
+  .react-calendar {
+
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 28px;
+    color: white;
+    backdrop-filter: blur(20px);
+
+  }
+
+
+  /* NAVIGATION */
+
+  .react-calendar__navigation {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+  }
+
+  .react-calendar__navigation button {
+
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: all .2s ease;
+
+  }
+
+  .react-calendar__navigation button:hover {
+
+    background: rgba(99, 102, 241, 0.2);
+
+  }
+
+
+  /* WEEKDAYS */
+
+  .react-calendar__month-view__weekdays {
+
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+
+  }
+
+
+  /* DAYS */
+
+  .react-calendar__tile {
+
+    padding: 16px 0;
+    border-radius: 12px;
+    transition: all .25s ease;
+
+  }
+
+  .react-calendar__tile:hover {
+
+    background: rgba(99, 102, 241, 0.15);
+    transform: scale(1.05);
+
+  }
+
+
+  /* ACTIVE DAY */
+
+  .react-calendar__tile--active {
+
+    background: #6366f1;
+    color: white;
+    border-radius: 14px;
+
+  }
+
+
+  /* TODAY */
+
+  .react-calendar__tile--now {
+
+    border: 1px solid rgba(99, 102, 241, 0.6);
+
   }
 }
